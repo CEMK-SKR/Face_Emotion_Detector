@@ -19,8 +19,9 @@ kaggle competitions download -c challenges-in-representation-learning-facial-exp
 # Screenshots
 # Result/Accuracy
 <div>
-  <img src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/result.jpg?raw=true">
+  <img src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/result.jpg?raw=true"/>
 </div>
+
 # Documentation
 - For Downloading the dataset [click here]()
 - Detailed Documentation [click here](https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/README.md)
