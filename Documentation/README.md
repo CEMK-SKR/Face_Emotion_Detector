@@ -20,10 +20,12 @@ import tensorflow as tf
 df = pd.read_csv('icml_face_data.csv')
 df.head(5)
 ```
+
 <div align="center">
   <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/1.jpg?raw=true"/>
 </div>
-```bash
+
+```bash 
 df.dtypes
 ```
 ```bash
@@ -33,6 +35,7 @@ df.head(5)
 <div align="center">
   <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/2.jpg?raw=true"/>
 </div>
+
 ```bash
 df.shape
 ```
@@ -46,6 +49,7 @@ df.head(5)
 <div align="center">
   <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/3.jpg?raw=true"/>
 </div>
+
 ```bash
 df.shape
 ```
