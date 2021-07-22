@@ -146,6 +146,6 @@ sn.heatmap(cm, annot=True, fmt='d')
 plt.xlabel('Predicted')
 plt.ylabel('Truth')
 ```
-<div>
+<div align="center">
   <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/result.jpg?raw=true"/>
 </div>
