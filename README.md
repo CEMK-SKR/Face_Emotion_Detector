@@ -1,4 +1,4 @@
-# Face_Emotion_Detector
+# Facial Emotion Detector
 Deep Learning Project for Ardent Internship Program
 
 
