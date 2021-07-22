@@ -20,6 +20,9 @@ import tensorflow as tf
 df = pd.read_csv('icml_face_data.csv')
 df.head(5)
 ```
+<div align="center">
+  <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/1.jpg?raw=true"/>
+</div>
 ```bash
 df.dtypes
 ```
@@ -27,6 +30,9 @@ df.dtypes
 df.drop(['usage'],inplace=True, axis=1)
 df.head(5)
 ```
+<div align="center">
+  <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/2.jpg?raw=true"/>
+</div>
 ```bash
 df.shape
 ```
@@ -37,6 +43,9 @@ df.isnull().sum()
 df.drop_duplicates(inplace=True)
 df.head(5)
 ```
+<div align="center">
+  <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/3.jpg?raw=true"/>
+</div>
 ```bash
 df.shape
 ```
@@ -116,6 +125,9 @@ model.compile(optimizer='adam',
 
 model.fit(X_train_rescaled,y_train,epochs=20)
 ```
+<div align="center">
+  <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/4.jpg?raw=true"/>
+</div>
 ```bash
 y_pred = model.predict(X_test_rescaled)
 ```
@@ -137,6 +149,9 @@ emotions[(y_pred_final[10])]
 ```bash
 print(classification_report(y_test,y_pred_final))
 ```
+<div align="center">
+  <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/5.jpg?raw=true"/>
+</div>
 ```bash
 import seaborn as sn
 cm = tf.math.confusion_matrix(labels=y_test, predictions=y_pred_final)
