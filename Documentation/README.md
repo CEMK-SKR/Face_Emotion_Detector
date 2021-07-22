@@ -129,9 +129,11 @@ model.compile(optimizer='adam',
 
 model.fit(X_train_rescaled,y_train,epochs=20)
 ```
+
 <div align="center">
   <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/4.jpg?raw=true"/>
 </div>
+
 ```bash
 y_pred = model.predict(X_test_rescaled)
 ```
@@ -153,9 +155,11 @@ emotions[(y_pred_final[10])]
 ```bash
 print(classification_report(y_test,y_pred_final))
 ```
+
 <div align="center">
   <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/5.jpg?raw=true"/>
 </div>
+
 ```bash
 import seaborn as sn
 cm = tf.math.confusion_matrix(labels=y_test, predictions=y_pred_final)
@@ -165,6 +169,7 @@ sn.heatmap(cm, annot=True, fmt='d')
 plt.xlabel('Predicted')
 plt.ylabel('Truth')
 ```
+
 <div align="center">
   <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/result.jpg?raw=true"/>
 </div>
