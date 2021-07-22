@@ -6,7 +6,9 @@ Install my-project with npm
 ```bash
 !pip install opencv-python
 !pip install tensorflow
+!pip install imblearn
 ```
+importing libraries
 ```bash
 import pandas as pd
 import numpy as np
@@ -81,15 +83,31 @@ X_train_rescaled = X_train/255
 ```
 ```bash
 from tensorflow import keras
+data_augmentation = keras.Sequential(
+    [
+        keras.layers.experimental.preprocessing.RandomRotation(0.1),
+        keras.layers.experimental.preprocessing.RandomZoom(0.1),
+    ]
+)
+```
 
+```bash
 model = keras.Sequential([
-    keras.layers.Conv2D(32, (8,8),activation='relu', input_shape=(48, 48,1)),
+    data_augmentation,
+    keras.layers.Conv2D(32, (3,3),activation='relu', padding='same',input_shape=(48, 48,1)),
+    keras.layers.Dropout(0.2),
+    
+    keras.layers.Conv2D(32, (5,5),activation='relu',padding='same'),
+    keras.layers.Dropout(0.2),
+    
+    keras.layers.Conv2D(32, (3,3),activation='relu', padding='same'),
     keras.layers.MaxPooling2D((2, 2)),
     keras.layers.Dropout(0.2),
 
     keras.layers.Flatten(),
-    keras.layers.Dense(100, activation='relu'),
-    keras.layers.Dense(7, activation='softmax')
+    keras.layers.Dense(256, activation='relu'),
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(len(emotions), activation='softmax')
 ])
 
 model.compile(optimizer='adam',
@@ -99,17 +117,32 @@ model.compile(optimizer='adam',
 model.fit(X_train_rescaled,y_train,epochs=20)
 ```
 ```bash
-y_pred = model.predict(X_test)
+y_pred = model.predict(X_test_rescaled)
 ```
 ```bash
 from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
 ```
 ```bash
-y_test.head(20)
+plt.matshow(X_test_rescaled[10])
 ```
 ```bash
-plt.matshow(X_test[6])
+y_pred_final= []
+for i in range(len(y_pred)):
+    y_pred_final.append(np.argmax(y_pred[i]))
 ```
 ```bash
-plt.matshow(X_test[6])
+emotions[(y_pred_final[10])]
+```
+```bash
+print(classification_report(y_test,y_pred_final))
+```
+```bash
+import seaborn as sn
+cm = tf.math.confusion_matrix(labels=y_test, predictions=y_pred_final)
+
+plt.figure(figsize=(10, 7))
+sn.heatmap(cm, annot=True, fmt='d')
+plt.xlabel('Predicted')
+plt.ylabel('Truth')
 ```
