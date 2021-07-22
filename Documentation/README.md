@@ -147,5 +147,5 @@ plt.xlabel('Predicted')
 plt.ylabel('Truth')
 ```
 <div>
-  <img height="60" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/result.jpg?raw=true"/>
+  <img height="60%" src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/result.jpg?raw=true"/>
 </div>
