@@ -1,5 +1,5 @@
 # Facial Emotion Detector
-Deep Learning Project for Ardent Internship Program
+<h2>Deep Learning Project for Ardent Internship Program</h2>
 
 
 For The DATASET Visit: [Kaggle.com](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
