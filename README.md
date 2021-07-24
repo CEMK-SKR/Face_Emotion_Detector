@@ -2,13 +2,9 @@
 <h2>Deep Learning Project for Ardent Internship Program</h2>
 
 
-For The DATASET Visit: [Kaggle.com](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
+For The DATASET Visit: [Kaggle.com](https://www.kaggle.com/msambare/fer2013)
 
-Or,
-use the Kaggle API: 
-```bash
-kaggle competitions download -c challenges-in-representation-learning-facial-expression-recognition-challenge
-```
+
 # About this Project
 
 - 
@@ -17,7 +13,7 @@ kaggle competitions download -c challenges-in-representation-learning-facial-exp
 # Dependencies used
 # Project Workflow
 # Screenshots
-# Result/Accuracy
+# Result/Accuracy for test Dataset
 <div>
   <img src="https://github.com/CEMK-SKR/Face_Emotion_Detector/blob/main/Documentation/screenshots/result.jpg?raw=true"/>
 </div>
